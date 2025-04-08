@@ -99,6 +99,15 @@
   .about-containers {
     margin-top: 0;
   }
+
+  /* 12 in 12 Section */
+  .twelve-intro h3 {
+    font-size: 1.6rem;
+  }
+
+  .twelve-intro p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -270,6 +279,33 @@
   .skill-item i {
     font-size: 2rem;
   }
+
+  /* 12 in 12 Section */
+  .startup-card {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .twelve-intro h3 {
+    font-size: 1.4rem;
+  }
+
+  .progress-tracker {
+    padding: 15px;
+  }
+
+  .learning-reflections h3 {
+    font-size: 1.4rem;
+  }
+
+  .reflection-card p {
+    font-size: 0.9rem;
+  }
+
+  .cursor-note {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -340,6 +376,35 @@
 
   .footer-logo {
     font-size: 1.5rem;
+  }
+
+  /* 12 in 12 Section */
+  .twelve-intro h3 {
+    font-size: 1.2rem;
+  }
+
+  .progress-text {
+    font-size: 1.1rem;
+  }
+
+  .startup-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .startup-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cursor-note {
+    font-size: 0.65rem;
+    max-width: 90%;
+    margin: 0.3rem auto 0;
   }
 }
 
