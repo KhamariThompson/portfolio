@@ -6,8 +6,85 @@ function toggleMenu() {
   hamburgerIcon.classList.toggle("open");
 }
 
+// Modal Functionality
+function initModals() {
+  // Get all modal trigger buttons
+  const modalButtons = document.querySelectorAll(".open-modal-btn");
+
+  // Add click event to each button
+  modalButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const targetModal = document.getElementById(
+        this.getAttribute("data-target")
+      );
+      openModal(targetModal);
+    });
+  });
+
+  // Get all close buttons
+  const closeButtons = document.querySelectorAll(
+    ".close-modal, .modal-close-btn"
+  );
+
+  // Add click event to each close button
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const modal = this.closest(".modal");
+      closeModal(modal);
+    });
+  });
+
+  // Close modal when clicking outside of modal content
+  window.addEventListener("click", function (event) {
+    if (event.target.classList.contains("modal")) {
+      closeModal(event.target);
+    }
+  });
+
+  // Close modal with escape key
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      const openModal = document.querySelector(".modal.show");
+      if (openModal) {
+        closeModal(openModal);
+      }
+    }
+  });
+}
+
+// Open modal function
+function openModal(modal) {
+  if (modal) {
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = "hidden";
+    modal.classList.add("show");
+
+    // Focus trap for accessibility
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableElements.length) {
+      setTimeout(() => {
+        focusableElements[0].focus();
+      }, 100);
+    }
+  }
+}
+
+// Close modal function
+function closeModal(modal) {
+  if (modal) {
+    // Restore body scrolling
+    document.body.style.overflow = "";
+    modal.classList.remove("show");
+  }
+}
+
 // Smooth Scrolling for Navigation Links
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize modals
+  initModals();
+
   const navLinks = document.querySelectorAll('a[href^="#"]');
 
   navLinks.forEach((link) => {

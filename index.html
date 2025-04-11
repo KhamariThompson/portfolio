@@ -150,12 +150,12 @@
             and ship meaningful products.
           </p>
           <div class="progress-tracker">
-            <div class="progress-text">✅ 0 / 12 Complete</div>
+            <div class="progress-text">✅ 1 / 12 Complete</div>
             <div class="progress-bar-container">
               <div
                 class="progress-bar"
                 id="twelve-progress-bar"
-                data-complete="0"
+                data-complete="1"
                 data-total="12"
               ></div>
             </div>
@@ -167,12 +167,26 @@
         </div>
 
         <div class="startup-grid">
-          <div class="startup-card">
+          <div class="startup-card" data-project="options-risk">
             <div class="card-content">
-              <h4>Startup #1</h4>
-              <div class="status">Status: Planning</div>
+              <h4>OptionsRisk Calculator</h4>
+              <div class="status">Status: In Development</div>
               <p>May 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">
+                A sophisticated options trading risk calculator that helps
+                traders analyze and manage their options positions with
+                professional-grade risk metrics and advanced visualization
+                tools. Features include position sizing, risk assessment,
+                profit/loss projections, and complete portfolio impact analysis.
+                Built for options traders of all levels, from beginners to
+                professionals looking for institutional-grade analytics.
+              </p>
+              <button
+                class="btn startup-btn open-modal-btn"
+                data-target="optionsRiskModal"
+              >
+                View Project Details
+              </button>
             </div>
           </div>
           <div class="startup-card">
@@ -685,6 +699,109 @@
         <p>&copy; 2024 Khamari Thompson. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <!-- Project Modals -->
+    <div id="optionsRiskModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2>OptionsRisk Calculator</h2>
+          <p class="modal-subtitle">
+            A one-page web app that helps retail traders calculate
+            risk-to-reward and avoid blowing their accounts
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-img">
+            <img
+              src="./assets/options-placeholder.jpg"
+              alt="OptionsRisk Calculator"
+              onerror="this.src='https://via.placeholder.com/800x450?text=OptionsRisk+Calculator+Preview'"
+            />
+          </div>
+          <div class="modal-info">
+            <div class="modal-section">
+              <h3>Project Overview</h3>
+              <p>
+                OptionsRisk Calculator is a minimalist web tool for options
+                traders to quickly determine position sizing based on their
+                account size, trade setup, and risk tolerance. It ensures
+                traders stick to disciplined risk practices — helping them avoid
+                over-leveraging while making smarter, data-driven trade
+                decisions.
+              </p>
+            </div>
+            <div class="modal-section">
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  <strong>Risk-to-Reward Calculation:</strong> Shows potential
+                  loss, gain, and risk/reward ratio
+                </li>
+                <li>
+                  <strong>Safe Position Sizing:</strong> Recommends how many
+                  contracts to buy based on account size and risk level
+                </li>
+                <li>
+                  <strong>Risk Mode Selection:</strong> Adjustable risk
+                  percentage slider (3% to 15%) to reflect trading style
+                </li>
+                <li>
+                  <strong>Trade Validation:</strong> Detects invalid setups
+                  (e.g., stop above entry, target below entry) and alerts users
+                </li>
+                <li>
+                  <strong>Instant Feedback:</strong> Dynamic calculations update
+                  in real time as users enter values
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Technical Stack</h3>
+              <ul>
+                <li><strong>Frontend:</strong> React + TypeScript</li>
+                <li><strong>Styling:</strong> Tailwind CSS</li>
+                <li>
+                  <strong>Hosting:</strong> Vercel or Netlify (static site)
+                </li>
+                <li>
+                  <strong>Backend:</strong> None (all logic handled client-side)
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Development Timeline</h3>
+              <ul>
+                <li>
+                  <strong>Week 1:</strong> Define calculation logic, build core
+                  UI and input structure
+                </li>
+                <li>
+                  <strong>Week 2:</strong> Implement live calculations,
+                  validation, and risk slider
+                </li>
+                <li>
+                  <strong>Week 3:</strong> Polish design, ensure mobile
+                  responsiveness, test for usability and deploy publicly
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p><strong>Launch Date:</strong> May 31, 2025</p>
+          <div class="modal-buttons">
+            <button class="btn primary-btn modal-close-btn">Close</button>
+            <a
+              href="https://options-risk-calculator.vercel.app"
+              class="btn primary-btn app-link"
+              target="_blank"
+              >Try Application <i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
     <script
