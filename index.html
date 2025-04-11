@@ -170,16 +170,15 @@
           <div class="startup-card" data-project="options-risk">
             <div class="card-content">
               <h4>OptionsRisk Calculator</h4>
-              <div class="status">Status: In Development</div>
+              <div class="status" style="color: #10b981; font-weight: bold">
+                Status: Live
+              </div>
               <p>May 2025</p>
               <p class="project-description">
                 A sophisticated options trading risk calculator that helps
                 traders analyze and manage their options positions with
                 professional-grade risk metrics and advanced visualization
-                tools. Features include position sizing, risk assessment,
-                profit/loss projections, and complete portfolio impact analysis.
-                Built for options traders of all levels, from beginners to
-                professionals looking for institutional-grade analytics.
+                tools.
               </p>
               <button
                 class="btn startup-btn open-modal-btn"
@@ -707,52 +706,58 @@
         <div class="modal-header">
           <h2>OptionsRisk Calculator</h2>
           <p class="modal-subtitle">
-            A one-page web app that helps retail traders calculate
-            risk-to-reward and avoid blowing their accounts
+            Smarter position sizing for options traders – prevent account
+            blowups, instantly.
           </p>
         </div>
         <div class="modal-body">
           <div class="modal-img">
             <img
-              src="./assets/options-placeholder.jpg"
+              src="./assets/options-calculator-screenshot.png"
               alt="OptionsRisk Calculator"
-              onerror="this.src='https://via.placeholder.com/800x450?text=OptionsRisk+Calculator+Preview'"
+              onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=OptionsRisk+Calculator'"
             />
           </div>
           <div class="modal-info">
             <div class="modal-section">
               <h3>Project Overview</h3>
               <p>
-                OptionsRisk Calculator is a minimalist web tool for options
-                traders to quickly determine position sizing based on their
-                account size, trade setup, and risk tolerance. It ensures
-                traders stick to disciplined risk practices — helping them avoid
-                over-leveraging while making smarter, data-driven trade
-                decisions.
+                OptionsRisk Calculator is a one-page web application that helps
+                retail options traders calculate the optimal number of contracts
+                to buy based on their account size, risk tolerance, and trade
+                setup. Built with simplicity in mind, the tool empowers traders
+                to apply professional risk management principles without needing
+                a finance degree or spreadsheet.
               </p>
             </div>
             <div class="modal-section">
               <h3>Key Features</h3>
               <ul>
                 <li>
-                  <strong>Risk-to-Reward Calculation:</strong> Shows potential
-                  loss, gain, and risk/reward ratio
+                  <strong>Position Sizing Calculator:</strong> Calculates how
+                  many option contracts to buy based on risk per trade, ensuring
+                  users never risk more than a set percentage of their account
+                  (3%–15%).
                 </li>
                 <li>
-                  <strong>Safe Position Sizing:</strong> Recommends how many
-                  contracts to buy based on account size and risk level
+                  <strong>Risk-to-Reward Analysis:</strong> Instantly visualizes
+                  trade setups with clear color-coded R:R ratios and potential
+                  profit/loss calculations.
                 </li>
                 <li>
-                  <strong>Risk Mode Selection:</strong> Adjustable risk
-                  percentage slider (3% to 15%) to reflect trading style
+                  <strong>Smart Risk Guidance:</strong> Distinguishes between
+                  actual risk and capital committed to help traders understand
+                  both downside and exposure.
                 </li>
                 <li>
-                  <strong>Trade Validation:</strong> Detects invalid setups
-                  (e.g., stop above entry, target below entry) and alerts users
+                  <strong>Live Price Fetching:</strong> Uses Finnhub API to
+                  fetch real-time stock prices and calculate strike distance
+                  from the current underlying.
                 </li>
                 <li>
-                  <strong>Instant Feedback:</strong> Dynamic calculations update
-                  in real time as users enter values
+                  <strong>Optional Advanced Inputs:</strong> Traders can
+                  optionally enter Delta, Theta, and IV to receive deeper
+                  insights without overwhelming beginner users.
                 </li>
               </ul>
             </div>
@@ -761,39 +766,27 @@
               <ul>
                 <li><strong>Frontend:</strong> React + TypeScript</li>
                 <li><strong>Styling:</strong> Tailwind CSS</li>
-                <li>
-                  <strong>Hosting:</strong> Vercel or Netlify (static site)
-                </li>
-                <li>
-                  <strong>Backend:</strong> None (all logic handled client-side)
-                </li>
+                <li><strong>API:</strong> Finnhub (stock price data)</li>
+                <li><strong>Hosting:</strong> Vercel</li>
               </ul>
             </div>
             <div class="modal-section">
-              <h3>Development Timeline</h3>
-              <ul>
-                <li>
-                  <strong>Week 1:</strong> Define calculation logic, build core
-                  UI and input structure
-                </li>
-                <li>
-                  <strong>Week 2:</strong> Implement live calculations,
-                  validation, and risk slider
-                </li>
-                <li>
-                  <strong>Week 3:</strong> Polish design, ensure mobile
-                  responsiveness, test for usability and deploy publicly
-                </li>
-              </ul>
+              <h3>Why I Built This</h3>
+              <p>
+                Most retail traders fail because of poor risk management. This
+                tool exists to make proper sizing, discipline, and R:R
+                evaluation instant, visual, and foolproof — shifting traders
+                from gambling to calculated execution.
+              </p>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <p><strong>Launch Date:</strong> May 31, 2025</p>
+          <p><strong>Launch Date:</strong> April 11, 2025</p>
           <div class="modal-buttons">
             <button class="btn primary-btn modal-close-btn">Close</button>
             <a
-              href="https://options-risk-calculator.vercel.app"
+              href="https://optionsriskcalculator.vercel.app"
               class="btn primary-btn app-link"
               target="_blank"
               >Try Application <i class="fas fa-external-link-alt"></i
