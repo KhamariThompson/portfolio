@@ -188,12 +188,22 @@
               </button>
             </div>
           </div>
-          <div class="startup-card">
+          <div class="startup-card" data-project="100days">
             <div class="card-content">
-              <h4>Startup #2</h4>
-              <div class="status">Status: Planning</div>
+              <h4>100Days</h4>
+              <div class="status" style="color: #f59e0b; font-weight: bold">
+                Status: Building
+              </div>
               <p>June 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">
+                Build discipline and momentum — one day at a time.
+              </p>
+              <button
+                class="btn startup-btn open-modal-btn"
+                data-target="100daysModal"
+              >
+                View Project Details
+              </button>
             </div>
           </div>
           <div class="startup-card">
@@ -790,6 +800,129 @@
               class="btn primary-btn app-link"
               target="_blank"
               >Try Application <i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for 100Days -->
+    <div id="100daysModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2>100Days</h2>
+          <p class="modal-subtitle">
+            Build consistency and transform your life — one day at a time.
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-img">
+            <img
+              src="./assets/100days-screenshot.png"
+              alt="100Days App"
+              onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=100Days+App'"
+            />
+          </div>
+          <div class="modal-info">
+            <div class="modal-section">
+              <h3>Project Overview</h3>
+              <p>
+                100Days is a mobile-first habit tracking platform designed to
+                help users stay consistent for 100 days straight. With a sleek,
+                distraction-free design and social accountability features, the
+                app turns daily habits into a powerful, trackable
+                transformation.
+              </p>
+              <p>
+                From the landing page to the iOS app, 100Days is being built in
+                public — generating early traction through a growing waitlist
+                and direct community feedback.
+              </p>
+            </div>
+            <div class="modal-section">
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  <strong>100-Day Habit Challenges:</strong> Create, join, and
+                  complete 100-day consistency challenges for fitness,
+                  mindfulness, learning, and more.
+                </li>
+                <li>
+                  <strong>Daily Check-Ins:</strong> Log streaks with journal
+                  entries, visual milestones, and optional photo evidence.
+                </li>
+                <li>
+                  <strong>Streak & Milestone Tracking:</strong> Celebrate
+                  milestones at day 7, 30, 50, 75, and 100 with elegant visual
+                  progress.
+                </li>
+                <li>
+                  <strong>Social Layer:</strong> Add friends, track public
+                  progress, and challenge each other to stay accountable.
+                </li>
+                <li>
+                  <strong>Freemium + Pro Model:</strong> Core features are free;
+                  Pro unlocks group challenges, social timeline, milestone
+                  sharing, and advanced stats.
+                </li>
+                <li>
+                  <strong>Dark Mode Native UI:</strong> Fully styled with a
+                  modern, minimal dark theme matching the marketing site.
+                </li>
+                <li>
+                  <strong>Real-Time Sync:</strong> All check-ins, challenges,
+                  and friend updates sync seamlessly with Firebase.
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Technical Stack</h3>
+              <ul>
+                <li><strong>Frontend:</strong> SwiftUI (iOS)</li>
+                <li>
+                  <strong>Backend:</strong> Firebase (Auth, Firestore, Storage)
+                </li>
+                <li>
+                  <strong>Monetization:</strong> RevenueCat for in-app Pro
+                  subscriptions
+                </li>
+                <li>
+                  <strong>Authentication:</strong> Email/Password + Google &
+                  Apple Sign-In
+                </li>
+                <li>
+                  <strong>Hosting:</strong> Vercel (for waitlist landing page)
+                </li>
+                <li>
+                  <strong>Waitlist Collection:</strong> Firebase Firestore via
+                  landing page
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Why I Built This</h3>
+              <p>
+                Inspired by the idea that consistency beats intensity, 100Days
+                was born from the belief that showing up every day — even for 5
+                minutes — compounds into transformation.
+              </p>
+              <p>
+                After launching the waitlist landing page and collecting
+                hundreds of sign-ups from Reddit, Twitter, and build-in-public
+                communities, I began building the app itself. 100Days blends
+                productivity, accountability, and social motivation into one
+                unified experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p><strong>Launch Date:</strong> June 2025</p>
+          <div class="modal-buttons">
+            <button class="btn primary-btn modal-close-btn">Close</button>
+            <a href="#" class="btn primary-btn app-link" target="_blank"
+              >Coming Soon <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
         </div>
