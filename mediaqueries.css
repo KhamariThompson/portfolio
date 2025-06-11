@@ -13,6 +13,10 @@
   .hero-text {
     max-width: 500px;
   }
+
+  .about-text {
+    max-width: 500px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -31,10 +35,16 @@
 
   .hero-image {
     order: 0;
+    margin: 0 auto;
   }
 
   .hero-image img,
   .about-image img {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .about-image {
     margin: 0 auto;
   }
 
@@ -69,35 +79,20 @@
     display: none;
   }
 
-  #hamburger-nav {
+  #mobile-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
+
+  section {
+    padding: 80px 0;
   }
 
-  .arrow {
-    display: none;
+  .section-header h2 {
+    font-size: 2.2rem;
   }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
+
+  .hero-text h1 {
+    font-size: 3rem;
   }
 
   /* 12 in 12 Section */
@@ -108,22 +103,25 @@
   .twelve-intro p {
     font-size: 1rem;
   }
+
+  .modal-content {
+    margin: 30px 20px;
+  }
+
+  .modal-body {
+    padding: 0 30px 30px;
+  }
+
+  .modal-header {
+    padding: 30px 30px 15px;
+  }
+
+  .modal-footer {
+    padding: 25px 30px;
+  }
 }
 
 @media screen and (max-width: 992px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
   .contact-container {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -161,23 +159,30 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .theme-toggle {
+    bottom: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   section {
-    padding: 80px 0;
+    padding: 70px 0;
   }
 
   .hero {
-    padding: 150px 0 80px;
+    padding: 150px 0 70px;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
 
   .hero-text p {
@@ -218,21 +223,48 @@
   }
 
   .contact-item {
-    padding: 20px;
+    padding: 25px;
   }
 
   .contact-form {
-    padding: 30px 20px;
+    padding: 30px 25px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .modal-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .modal-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .startup-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal-buttons {
+    width: 100%;
+  }
+
+  .modal-buttons .btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 576px) {
   .hero-text h1 {
     font-size: 2rem;
-  }
-
-  .hero-text h2 {
-    font-size: 1.2rem;
   }
 
   .hero-text p {
@@ -248,19 +280,12 @@
     font-size: 1.5rem;
   }
 
-  .timeline-content {
-    padding: 20px;
-    width: calc(100% - 60px);
-    margin-left: 60px !important;
-  }
-
   .project-image {
     height: 180px;
   }
 
   .footer-links {
     flex-wrap: wrap;
-    justify-content: center;
     gap: 15px;
   }
 
@@ -273,17 +298,15 @@
   }
 
   .skill-item {
-    padding: 15px 10px;
+    padding: 15px;
   }
 
   .skill-item i {
     font-size: 2rem;
   }
 
-  /* 12 in 12 Section */
   .startup-card {
-    height: auto;
-    min-height: 200px;
+    min-height: 180px;
   }
 
   .twelve-intro h3 {
@@ -291,20 +314,23 @@
   }
 
   .progress-tracker {
-    padding: 15px;
+    padding: 20px;
   }
 
   .learning-reflections h3 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .reflection-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .cursor-note {
-    font-size: 0.7rem;
-    margin-top: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .startup-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -326,38 +352,38 @@
   }
 
   .timeline-dot {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
   }
 
   .timeline-content {
-    width: calc(100% - 50px);
-    margin-left: 50px !important;
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
     padding: 15px;
   }
 
   .timeline-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .timeline-content h4 {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .project-content {
-    padding: 20px 15px;
+    padding: 20px;
   }
 
   .project-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .contact-item i {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .contact-item h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .form-group label {
@@ -367,44 +393,76 @@
   .form-group input,
   .form-group textarea {
     padding: 12px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .footer-logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
-  /* 12 in 12 Section */
   .twelve-intro h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .progress-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .startup-card h4 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .startup-btn {
-    padding: 6px 12px;
+    padding: 8px 15px;
     font-size: 0.85rem;
   }
 
   .hero-image img {
-    width: 200px;
-    height: 200px;
+    border-radius: 15px;
   }
 
   .cursor-note {
-    font-size: 0.65rem;
-    max-width: 90%;
-    margin: 0.3rem auto 0;
+    font-size: 0.8rem;
+  }
+
+  .theme-toggle {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .modal-subtitle {
+    font-size: 1rem;
+  }
+
+  .modal-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-img {
+    margin-bottom: 20px;
+  }
+
+  .modal-body {
+    padding: 0 20px 20px;
+    gap: 20px;
+  }
+
+  .modal-header {
+    padding: 25px 20px 10px;
+  }
+
+  .modal-footer {
+    padding: 20px;
   }
 }
 
@@ -413,30 +471,31 @@
     font-size: 1.6rem;
   }
 
-  .hero-text h2 {
-    font-size: 1.1rem;
+  .hero-text p {
+    font-size: 0.9rem;
   }
 
   .hero-image img,
   .about-image img {
-    max-width: 240px;
+    max-width: 250px;
   }
 
   .project-tech {
-    gap: 5px;
+    gap: 8px;
   }
 
   .project-tech span {
-    padding: 4px 8px;
-    font-size: 0.7rem;
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 
   .tags span {
-    padding: 4px 8px;
-    font-size: 0.7rem;
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 
   .contact-item {
+    padding: 15px;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -459,12 +518,11 @@
 
 @media screen and (max-width: 992px) and (orientation: landscape) {
   .hero {
-    padding: 120px 0 60px;
+    min-height: auto;
   }
 
   .hero-content {
     flex-direction: row;
-    text-align: left;
   }
 
   .hero-text {
@@ -476,7 +534,7 @@
   }
 
   .hero-image img {
-    max-width: 250px;
+    max-width: 280px;
   }
 
   .social-icons {

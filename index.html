@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khamari Thompson - Software Engineer building real-world software that scales."
+    />
+    <meta name="theme-color" content="#121212" />
+    <meta property="og:title" content="Khamari Thompson | Software Engineer" />
+    <meta
+      property="og:description"
+      content="Building Real-World Software That Scales"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://khamarithompson.com" />
+    <meta
+      property="og:image"
+      content="https://khamarithompson.com/assets/og-image.jpg"
+    />
     <title>Khamari Thompson | Software Engineer</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23121212'/%3E%3Ctext x='50' y='68' font-family='Arial, sans-serif' font-size='45' font-weight='bold' fill='%23f8f9fa' text-anchor='middle'%3EKT%3C/text%3E%3C/svg%3E"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link
@@ -17,6 +38,11 @@
     />
   </head>
   <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+      <i class="fas fa-sun"></i>
+    </div>
+
     <!-- Header -->
     <header>
       <nav id="desktop-nav">
@@ -55,11 +81,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+      <div class="radial-gradient"></div>
       <div class="hero-content">
-        <div class="hero-text">
-          <h1>Hi, I'm <span class="highlight">Khamari</span></h1>
-          <h2>Software Engineer</h2>
-          <p>Building Scalable & Intelligent Software Solutions</p>
+        <div class="hero-text fade-in">
+          <h1>Khamari Thompson</h1>
+          <p>Turning ideas into software that improves everyday life.</p>
           <div class="cta-buttons">
             <a
               href="./assets/Khamari_Thompson_Resume.pdf"
@@ -80,24 +106,25 @@
             ></a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="./assets/headshot3:17.jpg" alt="Khamari Thompson" />
+        <div class="hero-image fade-in">
+          <img
+            src="./assets/E529D380-A9F4-432B-9419-AADAEDE08B6B.JPG"
+            alt="Khamari Thompson"
+          />
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>About Me</h2>
         <div class="underline"></div>
       </div>
       <div class="about-content">
         <div class="about-image">
-          <img
-            src="./assets/E529D380-A9F4-432B-9419-AADAEDE08B6B.JPG"
-            alt="Khamari Thompson"
-          />
+          <img src="./assets/headshot3:17.jpg" alt="Khamari Thompson" />
         </div>
         <div class="about-text">
           <h3>Software Engineer</h3>
@@ -137,6 +164,7 @@
 
     <!-- 12 in 12 Section -->
     <section id="twelve-in-twelve" class="twelve-in-twelve">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>12 in 12 🚀</h2>
         <div class="underline"></div>
@@ -150,15 +178,16 @@
             and ship meaningful products.
           </p>
           <div class="progress-tracker">
-            <div class="progress-text">✅ 1 / 12 Complete</div>
+            <div class="progress-text">✅ 3 / 12 Complete</div>
             <div class="progress-bar-container">
               <div
                 class="progress-bar"
                 id="twelve-progress-bar"
-                data-complete="1"
+                data-complete="3"
                 data-total="12"
               ></div>
             </div>
+
             <div class="progress-timeline">May 2025 – April 2026</div>
           </div>
           <div class="cursor-note">
@@ -180,38 +209,49 @@
                 professional-grade risk metrics and advanced visualization
                 tools.
               </p>
-              <button
-                class="btn startup-btn open-modal-btn"
-                data-target="optionsRiskModal"
-              >
-                View Project Details
-              </button>
+              <div class="card-button">
+                <button
+                  class="btn startup-btn open-modal-btn"
+                  data-target="optionsRiskModal"
+                >
+                  View Project Details
+                </button>
+              </div>
             </div>
           </div>
           <div class="startup-card" data-project="100days">
             <div class="card-content">
               <h4>100Days</h4>
-              <div class="status" style="color: #f59e0b; font-weight: bold">
-                Status: Building
+              <div class="status" style="color: #10b981; font-weight: bold">
+                Status: Live
               </div>
               <p>June 2025</p>
               <p class="project-description">
                 Build discipline and momentum — one day at a time.
               </p>
-              <button
-                class="btn startup-btn open-modal-btn"
-                data-target="100daysModal"
-              >
-                View Project Details
-              </button>
+              <div class="card-button">
+                <button
+                  class="btn startup-btn open-modal-btn"
+                  data-target="100daysModal"
+                >
+                  View Project Details
+                </button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
             <div class="card-content">
-              <h4>Startup #3</h4>
-              <div class="status">Status: Planning</div>
+              <h4>Choice Chat</h4>
+              <div class="status" style="color: #f59e0b; font-weight: bold">
+                Status: Building
+              </div>
               <p>July 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <button
+                class="btn startup-btn open-modal-btn"
+                data-target="choiceChatModal"
+              >
+                View Project Details
+              </button>
             </div>
           </div>
           <div class="startup-card">
@@ -219,7 +259,10 @@
               <h4>Startup #4</h4>
               <div class="status">Status: Planning</div>
               <p>August 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -227,7 +270,10 @@
               <h4>Startup #5</h4>
               <div class="status">Status: Planning</div>
               <p>September 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -235,7 +281,10 @@
               <h4>Startup #6</h4>
               <div class="status">Status: Planning</div>
               <p>October 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -243,7 +292,10 @@
               <h4>Startup #7</h4>
               <div class="status">Status: Planning</div>
               <p>November 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -251,7 +303,10 @@
               <h4>Startup #8</h4>
               <div class="status">Status: Planning</div>
               <p>December 2025</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -259,7 +314,10 @@
               <h4>Startup #9</h4>
               <div class="status">Status: Planning</div>
               <p>January 2026</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -267,7 +325,10 @@
               <h4>Startup #10</h4>
               <div class="status">Status: Planning</div>
               <p>February 2026</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -275,7 +336,10 @@
               <h4>Startup #11</h4>
               <div class="status">Status: Planning</div>
               <p>March 2026</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
           <div class="startup-card">
@@ -283,7 +347,10 @@
               <h4>Startup #12</h4>
               <div class="status">Status: Planning</div>
               <p>April 2026</p>
-              <a href="#" class="btn startup-btn">Coming Soon</a>
+              <p class="project-description">Coming soon</p>
+              <div class="card-button">
+                <button class="btn startup-btn">Coming Soon</button>
+              </div>
             </div>
           </div>
         </div>
@@ -304,6 +371,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>My Skills</h2>
         <div class="underline"></div>
@@ -389,6 +457,7 @@
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>Experience</h2>
         <div class="underline"></div>
@@ -514,6 +583,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>Projects</h2>
         <div class="underline"></div>
@@ -617,6 +687,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
+      <div class="radial-gradient"></div>
       <div class="section-header">
         <h2>Contact Me</h2>
         <div class="underline"></div>
@@ -921,8 +992,138 @@
           <p><strong>Launch Date:</strong> June 2025</p>
           <div class="modal-buttons">
             <button class="btn primary-btn modal-close-btn">Close</button>
+            <a
+              href="https://apps.apple.com/us/app/100days-habit-tracker/id6744754614"
+              class="btn primary-btn app-link"
+              target="_blank"
+              >Download on App Store <i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Choice Chat -->
+    <div id="choiceChatModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+          <h2>Choice Chat</h2>
+          <p class="modal-subtitle">
+            Your AI-powered decision-making coach for life's toughest choices
+          </p>
+        </div>
+        <div class="modal-body">
+          <div class="modal-img">
+            <img
+              src="./assets/choice-chat-screenshot.png"
+              alt="Choice Chat"
+              onerror="this.src='https://placehold.co/800x450/1e293b/ffffff?text=Choice+Chat'"
+            />
+          </div>
+          <div class="modal-info">
+            <div class="modal-section">
+              <h3>Project Overview</h3>
+              <p>
+                ChoiceChat is an AI-powered decision-making coach built for
+                young adults who struggle with overthinking and decision
+                paralysis. Designed to feel like a therapist, strategist, and
+                best friend in one pocket app, ChoiceChat helps users break down
+                difficult choices—from relationships to career moves—into
+                logical, emotional, and long-term perspectives.
+              </p>
+              <p>
+                Built mobile-first for iOS, the app delivers judgment-free
+                guidance using GPT-4o and custom system prompts, while tracking
+                decisions over time through a smart journaling system. With a
+                clean, calming UI and affordable subscription, ChoiceChat offers
+                clarity at the moment it matters most.
+              </p>
+            </div>
+            <div class="modal-section">
+              <h3>Key Features</h3>
+              <ul>
+                <li>
+                  <strong>AI-Powered Decision Coach:</strong> Input any dilemma
+                  and instantly receive a structured breakdown from three key
+                  perspectives: Rational, Emotional, and Long-Term.
+                </li>
+                <li>
+                  <strong>Decision Journal:</strong> Automatically log each
+                  session and tag the outcome later with optional push
+                  reminders.
+                </li>
+                <li>
+                  <strong>Follow-Up Tools:</strong> Ask contextual follow-up
+                  questions or generate a dynamic Pros & Cons Matrix.
+                </li>
+                <li>
+                  <strong>Subscription Model:</strong> Free users can analyze up
+                  to 3 decisions/month; Pro unlocks unlimited usage, custom
+                  templates, and future features.
+                </li>
+                <li>
+                  <strong>Minimalist UI:</strong> Sleek SwiftUI interface that
+                  feels calm, private, and modern.
+                </li>
+                <li>
+                  <strong>System-Tailored Output:</strong> GPT-4o responds with
+                  contextual empathy, urgency scaling, and action-oriented next
+                  steps.
+                </li>
+                <li>
+                  <strong>Upcoming Add-ons:</strong> Custom tone sliders,
+                  template packs (e.g., breakups, job offers), and outcome
+                  analytics dashboard.
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Technical Stack</h3>
+              <ul>
+                <li><strong>Frontend:</strong> SwiftUI (iOS)</li>
+                <li>
+                  <strong>Backend:</strong> Firebase (Auth, Firestore, Cloud
+                  Functions)
+                </li>
+                <li>
+                  <strong>AI:</strong> OpenAI GPT-4o API with custom prompts
+                </li>
+                <li>
+                  <strong>Monetization:</strong> RevenueCat for in-app Pro
+                  subscriptions
+                </li>
+                <li><strong>Authentication:</strong> Apple Sign-In</li>
+                <li>
+                  <strong>Analytics:</strong> Firebase + PostHog for behavior
+                  tracking and retention funnels
+                </li>
+              </ul>
+            </div>
+            <div class="modal-section">
+              <h3>Why I Built This</h3>
+              <p>
+                In a world full of pressure, options, and conflicting advice,
+                young adults often feel stuck when faced with big life
+                decisions. I built ChoiceChat to be a calm, always-available
+                coach that helps users think clearly when emotions run high. By
+                combining empathy with structured AI logic, ChoiceChat gives
+                people the confidence to trust their decisions—and take action.
+              </p>
+              <p>
+                The app is launching with a waitlist-first approach and will be
+                shared publicly through Twitter, TikTok, and startup communities
+                as part of a transparent build-in-public strategy.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p><strong>Launch Date:</strong> July 2025</p>
+          <div class="modal-buttons">
+            <button class="btn primary-btn modal-close-btn">Close</button>
             <a href="#" class="btn primary-btn app-link" target="_blank"
-              >Coming Soon <i class="fas fa-external-link-alt"></i
+              >Join Waitlist <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
         </div>
